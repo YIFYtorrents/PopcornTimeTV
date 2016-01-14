@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'PopcornTime' do
-  link_with 'PopcornTime', 'PopcornKit', 'PopcornKitTests'
+  link_with 'PopcornTime', 'PopcornKit', 'PopcornKitTests, PopcornTimeExtension'
   pod 'CocoaSecurity'
   pod 'Genome'
   pod "SnapKit"

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="rng-fb-0xa">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Collection View-->
+        <scene sceneID="f3s-bj-EBi">
+            <objects>
+                <viewController id="3wY-a8-FOu" customClass="HomeCollectionView" customModule="PopcornTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z0G-I1-cok"/>
+                        <viewControllerLayoutGuide type="bottom" id="86Q-3n-P3t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qtB-d2-7Pv">
+                        <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OD3-cI-vkg">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="STA-za-zoi">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="xNa-d9-xFn">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="86Q-3n-P3t" firstAttribute="top" secondItem="OD3-cI-vkg" secondAttribute="bottom" id="IVh-4D-MUH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OD3-cI-vkg" secondAttribute="trailing" constant="669" id="cbx-u5-g3M"/>
+                            <constraint firstItem="OD3-cI-vkg" firstAttribute="top" secondItem="z0G-I1-cok" secondAttribute="bottom" id="fY9-CH-Mqj"/>
+                            <constraint firstItem="OD3-cI-vkg" firstAttribute="leading" secondItem="qtB-d2-7Pv" secondAttribute="leadingMargin" id="pmr-5V-mGv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="OD3-cI-vkg" id="bfK-9a-6ZD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6jt-ox-9af" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="655.5" y="450"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="RJF-of-0Fd">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="6zQ-VH-JRZ" customClass="HomeListView" customModule="PopcornTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="40" sectionFooterHeight="40" id="3WJ-Rt-hon">
+                        <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="W5d-Zx-ij9">
+                                <rect key="frame" x="0.0" y="199" width="594" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W5d-Zx-ij9" id="5Q5-wb-thj">
+                                    <rect key="frame" x="0.0" y="0.0" width="618" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6zQ-VH-JRZ" id="LlP-E1-114"/>
+                            <outlet property="delegate" destination="6zQ-VH-JRZ" id="bSr-Dg-rGo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Movies" id="AFW-rI-CK7"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTQ-iB-vfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184" y="-691"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="On6-Lt-fnQ">
+            <objects>
+                <navigationController id="iOp-a4-xUa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MMC-QN-hAC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6zQ-VH-JRZ" kind="relationship" relationship="rootViewController" id="8wX-l6-KMZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mrU-7n-2S1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330" y="-691"/>
+        </scene>
+        <!--Home Split View-->
+        <scene sceneID="8tZ-NK-p9n">
+            <objects>
+                <splitViewController id="rng-fb-0xa" customClass="HomeSplitView" customModule="PopcornTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="iOp-a4-xUa" kind="relationship" relationship="masterViewController" id="oM0-ZE-tQf"/>
+                        <segue destination="3wY-a8-FOu" kind="relationship" relationship="detailViewController" id="fC1-e2-J5l"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qet-pv-bLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1167" y="-122"/>
+        </scene>
+    </scenes>
+</document>
