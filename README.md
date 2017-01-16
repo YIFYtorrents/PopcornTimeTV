@@ -1,15 +1,15 @@
 PopcornTime tvOS
 ================
 
-![header](https://github.com/pepibumur/PopcornTimeTV/raw/master/Assets/Header.png?raw=true)
+![header](https://github.com/YIFYtorrents/PopcornTimeTV/raw/master/Assets/Header.png?raw=true)
 
 
-[![Build Status](https://travis-ci.org/pepibumur/PopcornTimeTV.svg?branch=master)](https://travis-ci.org/pepibumur/PopcornTimeTV)
+[![Build Status](https://travis-ci.org/YIFYtorrents/PopcornTimeTV.svg?branch=master)](https://travis-ci.org/YIFYtorrents/PopcornTimeTV)
 
 ### Setup
 
-1. Git clone the repository `https://github.com/pepibumur/PopcornTimeTV.git`
-2. Execute `bash script/bootstrap'
+1. Git clone the repository `https://github.com/YIFYtorrents/PopcornTimeTV.git`
+2. Execute `bash script/bootstrap`
 2. Install gem dependencies `bundle install`
 3. Install the pod dependencies `bundle exec pod install`
 4. Open the project using `PopcornTime.xcworkspace`
